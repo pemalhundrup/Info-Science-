@@ -1,0 +1,40 @@
+What are some ways in which Computer Science can help the fight against COVID-19?
+-Computer science is a powerful resource in the fight against COVID-19. It enables researchers and scientists to access information and by using computer simulations with the help of the computing power of the larger population. It could also provide databases for the storage of information about the disease collected from people all over the world. 
+
+In your opinion, should people enable access to the resources of their personal computers as tools for research? Are there any risks?
+-Yes, people should enable access to the resources of their personal computers because COVID-19 is a global pandemic that affects all of us. No person will go unscathed and businesses and companies will suffer. So the faster we find a solution to this the better. However, among the many disadvantages, fo crowdsourcing lack of privacy ad no confidentiality are risks a lot of people are not willing to take. Along with poor quality entries, the Crowdsourcing contestants normally submit whatever comes to them off the top of their heads, leading to inaccurate data submitted by the masses and the personal data of the people are left subject to the speculation of the internet.
+
+
+Code: 
+
+# definition of variables
+x = [300, 200]
+y = [300, 200]
+
+def setup():
+    size(500, 500)
+    
+def draw():
+    global x, y
+    background(255)
+    strokeWeight(2)
+    
+    #create 1st individual
+    for i in range(2):
+        circle(x[i], y[i], 40)
+        x[i] = x[i] + random(-10, 10)
+        y[i] = y[i] + random(-10, 10)
+        
+        #boudary conditions
+        if x[i]>500:
+            x[i] = 500
+        if x[i]<0:
+            x[i] = 0
+        if y[i]>500:
+            y[i] = 500
+        if y[i]<0:
+            y[i] = 0
+    
+    delay(100)
+
+ 
